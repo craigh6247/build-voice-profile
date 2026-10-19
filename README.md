@@ -4,19 +4,48 @@ A reusable agent skill for interviewing someone and building an evidence-based g
 
 It asks concrete questions one at a time, samples personal and work situations where relevant, shows a provisional profile, and calibrates it through sample drafts and corrections. If requested, it can package the result as a separate person-specific writing skill using the available skill-creator workflow.
 
-## Private repository access
+## Option 1: Vercel Skills CLI
 
-This repository is private. You need an account with access and working Git/GitHub authentication. The plugin routes below use an authenticated local clone:
+With Node.js/npm available, list the repository's skills without installing:
+
+```sh
+npx skills@latest add craigh6247/build-voice-profile --list
+```
+
+Install only this skill for Codex at user scope:
+
+```sh
+npx skills@latest add craigh6247/build-voice-profile --skill build-voice-profile --agent codex --global
+```
+
+Omit `--global` for project scope, or choose another supported `--agent`. This installs the skill, rather than registering the whole plugin. See the official [Skills CLI documentation](https://www.skills.sh/docs/cli) and [source/option reference](https://github.com/vercel-labs/skills#install-a-skill).
+
+If a checkout or installed skill already exists, review it before replacing or updating it. To disable CLI telemetry, prefix commands with `DISABLE_TELEMETRY=1` as described in the [official telemetry documentation](https://www.skills.sh/docs/cli#telemetry).
+
+### Optional local-clone or authentication fallback
+
+If direct discovery fails in your environment, install from a local checkout. When repository access requires authentication, use an account with access and your configured Git credentials or GitHub CLI. For example, with GitHub CLI already configured:
 
 ```sh
 gh repo clone craigh6247/build-voice-profile
+cd build-voice-profile
+npx skills@latest add . --list
+npx skills@latest add . --skill build-voice-profile --agent codex --global
 ```
 
-If a checkout or installed skill already exists, review it before replacing or updating it. Keep the clone outside your agent's skills directory: this repository now packages its canonical skill under `skills/build-voice-profile/`.
+GitHub CLI authentication and Git credentials can differ; see Vercel's [private-repository guidance](https://github.com/vercel-labs/skills#private-repositories) when authenticated access is needed.
 
-## Option 1: Agent Plugin
+## Option 2: Agent Plugin
 
 The repository root is an [Agent Plugins 1.0 package](https://agent-plugins.org/plugin-authors/build-an-agent-plugin), with a root [plugin.json](plugin.json) and one skill under `skills/`. Installation and enablement belong to each client; the standard does not define a universal installation command. Use a client that supports the skills component in the [compatible-client directory](https://agent-plugins.org/compatible-clients).
+
+For a local plugin, clone with Git:
+
+```sh
+git clone https://github.com/craigh6247/build-voice-profile.git
+```
+
+Keep the clone outside your agent's skills directory: the canonical skill is under `skills/build-voice-profile/`. If your environment requires authenticated access, use the optional fallback above.
 
 ### VS Code with GitHub Copilot
 
@@ -38,36 +67,10 @@ Open **Chat: Configure Skills** to check that the plugin's skill is available. T
 Clone directly into Cursor's local plugin directory instead of making the general clone above:
 
 ```sh
-gh repo clone craigh6247/build-voice-profile ~/.cursor/plugins/local/build-voice-profile
+git clone https://github.com/craigh6247/build-voice-profile.git ~/.cursor/plugins/local/build-voice-profile
 ```
 
 Restart Cursor or run **Developer: Reload Window**, then open **Customize** to check the skill. Local plugin imports must be allowed by your organisation, and an installed marketplace plugin with the same name takes precedence. See Cursor's [local-plugin instructions](https://cursor.com/docs/plugins#test-plugins-locally). No marketplace publication is required for this route.
-
-## Option 2: Vercel Skills CLI
-
-With Node.js/npm available, list the repository's skills without installing:
-
-```sh
-npx skills@latest add craigh6247/build-voice-profile --list
-```
-
-Install only this skill for Codex at user scope:
-
-```sh
-npx skills@latest add craigh6247/build-voice-profile --skill build-voice-profile --agent codex --global
-```
-
-Omit `--global` for project scope, or choose another supported `--agent`. This installs the skill, rather than registering the whole plugin. See the official [Skills CLI documentation](https://www.skills.sh/docs/cli) and [source/option reference](https://github.com/vercel-labs/skills#install-a-skill).
-
-Private sources require working authentication for the source URL. If shorthand/HTTPS discovery fails, use the authenticated clone above and install from its local path:
-
-```sh
-cd build-voice-profile
-npx skills@latest add . --list
-npx skills@latest add . --skill build-voice-profile --agent codex --global
-```
-
-GitHub CLI authentication and Git credentials can differ; successful `gh` access alone does not prove every CLI version's HTTPS flow works. See Vercel's [private-repository guidance](https://github.com/vercel-labs/skills#private-repositories). No new access token is required for the local-clone route. To disable CLI telemetry, prefix commands with `DISABLE_TELEMETRY=1` as described in the [official telemetry documentation](https://www.skills.sh/docs/cli#telemetry).
 
 ## Use
 
