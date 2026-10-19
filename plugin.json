@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "build-voice-profile",
+  "version": "1.0.0",
+  "description": "Interview someone and calibrate an evidence-based profile of their writing voice, including customer and investor communications.",
+  "repository": "https://github.com/craigh6247/build-voice-profile"
+}
