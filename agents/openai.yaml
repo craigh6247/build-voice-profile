@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a voice profile"
+  short_description: "Interview someone to capture their writing voice"
+  default_prompt: "Use $build-voice-profile to interview me one question at a time and build a practical profile of my writing voice."
