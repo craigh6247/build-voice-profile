@@ -2,6 +2,8 @@
 
 These are optional starting points, not a script to read all at once. Ask one at a time, adapt the context and avoid inventing a real incident involving a named person. State hypothetical situations as hypothetical.
 
+For a deeper customer or investor interview, select from [professional-writing.md](professional-writing.md) alongside this route. Continue from existing evidence rather than restarting.
+
 ## A flexible fifteen-question route
 
 1. What's something you did recently outside work that you really enjoyed?

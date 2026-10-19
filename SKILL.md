@@ -1,6 +1,6 @@
 ---
 name: build-voice-profile
-description: Interview a willing person through concrete conversational questions, build an evidence-based profile of their writing voice, and calibrate it with sample drafts. Use when someone wants writing to sound like them or asks to repeat a voice-profiling interview, rather than simply applying an existing voice skill.
+description: Interview a willing person through concrete conversational questions, build an evidence-based profile of their writing voice, and calibrate it with sample drafts, including customer and investor communications. Use when someone wants writing to sound like them or asks to repeat a voice-profiling interview, rather than simply applying an existing voice skill.
 ---
 
 # Build a voice profile
@@ -24,6 +24,12 @@ If the intended uses are unclear, ask one brief question about what they want to
 - Respond naturally without analysing or praising every answer. Repeated "that's very you" commentary interrupts the conversation and can encourage performance.
 - Follow personal topics gently. Let the person decline, avoid soliciting sensitive details unnecessarily, and change direction when a question does not fit. Do not infer health, personality or relationships from a language sample.
 - When someone describes frustration, distinguish their internal reaction from the message they would actually send. Ask for the sendable version when useful. Preserve both as different registers rather than treating one as inauthentic.
+
+## Extend the interview for professional writing
+
+When the person wants to improve customer, VC or other investor communications, use [references/professional-writing.md](references/professional-writing.md). It offers optional customer and investor modules alongside the everyday route. Select questions that fill evidence gaps, one at a time; neither route is a required quota. Reuse known recipient context and desired outcomes rather than asking for them again.
+
+Learn how the person's own voice changes with audience, relationship and purpose. Professional writing does not require generic corporate language or another person's style. Ground drafts in supplied business facts, distinguish private intent from sendable language, and calibrate short samples for tone, specificity, the ask and certainty. Capture customer-versus-investor differences only where supported, and name untested situations explicitly.
 
 ## Build the provisional profile
 

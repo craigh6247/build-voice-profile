@@ -22,10 +22,19 @@ Use $build-voice-profile to interview me one question at a time and build a prac
 
 You can provide existing writing samples or a previous profile, specify the intended audience, or request a fixed number of questions. Voice transcripts and typed answers both work; the skill profiles writing, not acoustic characteristics.
 
+For professional writing, ask for an extension focused on your customer or VC/investor communications:
+
+```text
+Use $build-voice-profile to extend my profile for customer and investor writing. Build on the samples we already have, and ask one concrete question at a time.
+```
+
+The optional professional modules offer seven customer and five investor prompts covering value, commercial conversations, follow-ups, boundaries, difficult updates, evidence, introductions, traction, ambition and funding. Select the useful situations rather than completing a fixed questionnaire, then calibrate short drafts for the intended audiences.
+
 ## Contents
 
 - [SKILL.md](SKILL.md): interview, profiling, calibration and optional packaging workflow.
 - [references/interview-prompts.md](references/interview-prompts.md): adaptable questions, follow-ups and calibration prompts.
+- [references/professional-writing.md](references/professional-writing.md): optional customer and investor interview modules, draft calibration and evidence limits.
 - [agents/openai.yaml](agents/openai.yaml): Codex display metadata and starter prompt.
 
 This repository contains the generic method only. It does not include personal interview transcripts, voice anchors or a person-specific writing profile. Creating a profile does not authorise publishing it or sending messages on someone's behalf.
