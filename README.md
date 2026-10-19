@@ -4,6 +4,10 @@ A reusable agent skill for interviewing someone and building an evidence-based g
 
 It asks concrete questions one at a time, samples personal and work situations where relevant, shows a provisional profile, and calibrates it through sample drafts and corrections. If requested, it can package the result as a separate person-specific writing skill using the available skill-creator workflow.
 
+## Inspiration
+
+The starting inspiration was Paul Graham's [Write Like You Talk](https://paulgraham.com/talk.html) (October 2015). Graham encourages conversational language: test whether you would say a sentence to a friend, read drafts aloud, or explain an idea aloud to find more natural wording. This skill builds on that principle through concrete interview questions and draft calibration, learning from the person's own language and corrections while adapting to the audience.
+
 ## Option 1: Vercel Skills CLI
 
 With Node.js/npm available, list the repository's skills without installing:
